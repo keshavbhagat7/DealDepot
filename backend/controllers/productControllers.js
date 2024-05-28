@@ -79,3 +79,91 @@ export const deleteProduct = catchAsyncErrors(async (req, res) => {
         message: "Product deleted"
     });
 });
+
+//  Create/Update product review => /api/v1/reviews
+export const createProductReview = catchAsyncErrors(async (req, res, next) => {
+    const {
+        rating,
+        comment,
+        productID
+    } = req.body;
+
+    const review = {
+        user: req?.user?._id,
+        rating: Number(rating),
+        comment,
+    };
+
+    const product = await Product.findById(productID);
+
+    if (!product) { 
+        return next(new ErrorHandler("Product not found", 404));
+    }
+
+    const isReviewed = product?.reviews?.find(r => r.user.toString() === req?.user?._id.toString());
+
+    if (isReviewed) {
+        product.reviews.forEach((review) => {
+            if (review?.user?.toString() === req?.user?._id.toString()) {
+                review.rating = rating;
+                review.comment = comment;
+            }
+        });
+    } else {
+        product.reviews.push(review);
+        product.numOfReviews = product.reviews.length;
+    }
+
+    product.ratings = product.reviews.reduce((acc, item) => item.rating + acc, 0) / product.reviews.length;
+
+    await product.save({ validateBeforeSave: false });
+
+    res.status(200).json({
+        success: true,
+    });
+});
+
+// Get product reviews => /api/v1/reviews
+export const getProductReviews = catchAsyncErrors(async (req, res, next) => {
+    const product = await Product.findById(req.query.id);
+
+    if (!product) {
+        return next(new ErrorHandler("Product not found", 404));
+    }
+
+    res.status(200).json({
+        reviews: product.reviews,
+    })
+});
+
+// Delete product review => /api/v1/admin/reviews
+export const deleteReview = catchAsyncErrors(async (req, res, next) => {
+    let product = await Product.findById(req.query.productId);
+
+    if (!product) {
+        return next(new ErrorHandler("Product not found", 404));
+    }
+
+    const reviews = product?.reviews?.filter(
+        (review) => review._id.toString() !== req?.query?.id.toString()
+    );
+
+    const numOfReviews = reviews.length;
+
+    const ratings = 
+        numOfReviews === 0
+        ? 0
+        : product.reviews.reduce((acc, item) => item.rating + acc, 0) / 
+          numOfReviews;
+
+    product = await Product.findByIdAndUpdate(
+        req.query.productId,
+        { reviews, numOfReviews, ratings },
+        { new: true }
+    );
+
+    res.status(200).json({
+        success: true,
+        product,
+    });
+});
