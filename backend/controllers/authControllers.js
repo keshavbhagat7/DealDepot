@@ -117,3 +117,103 @@ export const resetPassword = catchAsyncErrors( async (req, res, next) => {
 
     sendToken(user, 200, res);
 });
+
+// Get current user profile => /api/v1/me
+export const getUserProfile = catchAsyncErrors( async (req, res, next) => {
+    const user = await User.findById(req?.user?._id);
+
+    res.status(200).json({
+        user,
+    });
+});
+
+// Update password => /api/v1/password/update
+export const updatePassword = catchAsyncErrors( async (req, res, next) => {
+    const user = await User.findById(req?.user?._id).select("+password");
+
+    // Check if previous user password
+    const isPasswordMatched = await user.comparePassword(req.body.oldPassword);
+
+    if (!isPasswordMatched) {
+        return next(new ErrorHandler("Old password is incorrect", 400));
+    }
+
+    user.password =  req.body.password;
+    await user.save();
+
+    res.status(200).json({
+        success: true,
+    });
+});
+
+// Update User profile => /api/v1/me/update
+export const updateProfile = catchAsyncErrors( async (req, res, next) => {
+    const newUserData = {
+        name: req.body.name,
+        email: req.body.email,
+    };
+
+    const user = await User.findByIdAndUpdate(req?.user?._id, newUserData, {
+        new: true,
+    });
+
+    res.status(200).json({
+        user,
+    });
+});
+
+// Get all users - admin => /api/v1/admin/users
+export const getAllUsers = catchAsyncErrors( async (req, res, next) => {
+    const users = await User.find();
+
+    res.status(200).json({
+        users,
+    });
+});
+
+// Get User Details - admin => /api/v1/admin/users/:id
+export const getUserDetails = catchAsyncErrors( async (req, res, next) => {
+    const user = await User.findById(req.params.id);
+
+    if (!user) {
+        return next(new ErrorHandler("User not found", 404));
+    }
+
+    res.status(200).json({
+        user,
+    });
+});
+
+// Update User Details - admin => /api/v1/admin/users/:id
+export const updateUserDetails = catchAsyncErrors( async (req, res, next) => {
+    const newUserData = {
+        name: req.body.name,
+        email: req.body.email,
+        role: req.body.role,
+    };
+
+    const user = await User.findByIdAndUpdate(req.params.id, newUserData, {
+        new: true,
+    });
+
+    res.status(200).json({
+        user,
+    });
+});
+
+// Delete User - admin => /api/v1/admin/users/:id
+export const deleteUser = catchAsyncErrors( async (req, res, next) => {
+    const user = await User.findById(req.params.id);
+
+    if (!user) {
+        return next(new ErrorHandler("User not found", 404));
+    }
+
+    // TODO: Remove User Avatar from Cloudinary
+
+    await user.deleteOne();
+
+    res.status(200).json({
+        success: true,
+    });
+});
