@@ -36,6 +36,10 @@ export default (err, req, res, next) => {
         error = new ErrorHandler(message, 400);
     }
 
+    if (res.headersSent) {
+        return next(error);
+    }
+
     if (process.env.NODE_ENV === "DEVELOPMENT") {
         res.status(error.statusCode).json({
             message: error.message,
