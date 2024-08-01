@@ -39,7 +39,7 @@ const ProductDetails = () => {
                 <div className="row justify-content-start mt-5">
                     {product?.images?.map((img) => (
                         <div className="col-2 ms-4 mt-2">
-                            <a role="button">
+                            <a href="button">
                                 <img
                                     className={`d-block border rounded p-3 cursor-pointer ${img.url === activeImage ? "border-warning" : ""}`}
                                     height="100"
