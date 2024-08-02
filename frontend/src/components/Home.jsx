@@ -51,8 +51,8 @@ const Home = () => {
                         </h1>
                     <section id="products" className="mt-5">
                         <div className="row">
-                            {data?.products?.map((product) => (
-                                <ProductItem product={product} columnSize={columnSize}/>
+                            {data?.products?.map((product, key) => (
+                                <ProductItem product={product} columnSize={columnSize} key={key} />
                             ))}
                         </div>
                     </section>
