@@ -25,9 +25,9 @@ export const userApi = createApi({
         updateProfile: builder.mutation({
             query(body) {
                 return {
-                url: "/me/update",
-                method: "PUT",
-                body,
+                    url: "/me/update",
+                    method: "PUT",
+                    body,
                 };
             },
             invalidatesTags: ["User"],
@@ -35,9 +35,9 @@ export const userApi = createApi({
         uploadAvatar: builder.mutation({
             query(body) {
                 return {
-                url: "/me/upload_avatar",
-                method: "PUT",
-                body,
+                    url: "/me/upload_avatar",
+                    method: "PUT",
+                    body,
                 };
             },
             invalidatesTags: ["User"],
@@ -45,9 +45,9 @@ export const userApi = createApi({
         updatePassword: builder.mutation({
             query(body) {
                 return {
-                url: "/password/update",
-                method: "PUT",
-                body,
+                    url: "/password/update",
+                    method: "PUT",
+                    body,
                 };
             },
         }),

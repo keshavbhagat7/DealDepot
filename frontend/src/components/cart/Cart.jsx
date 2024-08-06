@@ -1,11 +1,12 @@
 import React from "react";
 import MetaData from "../layout/MetaData";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { setCartItem, removeCartItem } from "../../redux/features/cartSlice";
 
 const Cart = () => {
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const { cartItems } = useSelector((state) => state.cart);
 
@@ -42,6 +43,10 @@ const Cart = () => {
         dispatch(removeCartItem(id));
     };
 
+    const checkoutHandler = () => {
+        navigate('/shipping');
+    }
+
     return (
         <>
             <MetaData title={"Your Cart"} />
@@ -63,7 +68,7 @@ const Cart = () => {
                                             <div className="col-4 col-lg-3">
                                                 <img
                                                     src={item?.image}
-                                                    alt="Laptop"
+                                                    alt="Cart"
                                                     height="90"
                                                     width="115"
                                                 />
@@ -138,7 +143,7 @@ const Cart = () => {
                                     </span>
                                 </p>
                                 <hr />
-                                <button id="checkout_btn" className="btn btn-primary w-100">
+                                <button id="checkout_btn" className="btn btn-primary w-100" onClick={checkoutHandler}>
                                     Check out
                                 </button>
                             </div>
