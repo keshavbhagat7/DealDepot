@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Search from './Search'
 import { useGetMeQuery } from '../../redux/api/userApi'
 import { useSelector } from 'react-redux';
@@ -10,15 +10,19 @@ const Header = () => {
   const navigate = useNavigate();
 
   const { isLoading } = useGetMeQuery();
-  const [logout] = useLazyLogoutQuery();
 
   const { user } = useSelector((state) => state.auth);
   const { cartItems } = useSelector((state) => state.cart);
 
+  const [logout, { isSuccess }] = useLazyLogoutQuery();
+
+  useEffect(() => {
+    if (isSuccess) navigate(0); // refresh page
+  }, [isSuccess, navigate]);
+
   const logoutHandler = () => {
     logout();
-    navigate(0);
-  }
+  };
 
   return (
     <nav className="navbar row">

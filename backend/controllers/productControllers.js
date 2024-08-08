@@ -37,7 +37,9 @@ export const newProduct = catchAsyncErrors(async (req, res) => {
 
 // Get a single product => /api/v1/products/:id
 export const getProductDetails = catchAsyncErrors(async (req, res, next) => {
-    const product = await Product.findById(req?.params?.id);
+    const product = await Product.findById(req?.params?.id).populate(
+        "reviews.user"
+    );
 
     if (!product) { 
         return next(new ErrorHandler("Product not found", 404));
@@ -142,7 +144,7 @@ export const createProductReview = catchAsyncErrors(async (req, res, next) => {
     const {
         rating,
         comment,
-        productID
+        productId
     } = req.body;
 
     const review = {
@@ -151,7 +153,7 @@ export const createProductReview = catchAsyncErrors(async (req, res, next) => {
         comment,
     };
 
-    const product = await Product.findById(productID);
+    const product = await Product.findById(productId);
 
     if (!product) { 
         return next(new ErrorHandler("Product not found", 404));
@@ -182,7 +184,7 @@ export const createProductReview = catchAsyncErrors(async (req, res, next) => {
 
 // Get product reviews => /api/v1/reviews
 export const getProductReviews = catchAsyncErrors(async (req, res, next) => {
-    const product = await Product.findById(req.query.id);
+    const product = await Product.findById(req.query.id).populate("reviews.user");
 
     if (!product) {
         return next(new ErrorHandler("Product not found", 404));
