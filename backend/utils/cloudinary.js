@@ -12,17 +12,17 @@ cloudinary.config({
 export const upload_file = (file, folder) => {
     return new Promise((resolve, reject) => {
         cloudinary.uploader.upload(
-        file,
-        (result) => {
-            resolve({
-            public_id: result.public_id,
-            url: result.url,
-            });
-        },
-        {
-            resource_type: "auto",
-            folder,
-        }
+            file,
+            (result) => {
+                resolve({
+                    public_id: result.public_id,
+                    url: result.url,
+                });
+            },
+            {
+                resource_type: "auto",
+                folder,
+            }
         );
     });
 };
