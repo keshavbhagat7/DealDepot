@@ -9,6 +9,7 @@ import { setCartItem } from '../../redux/features/cartSlice'
 import MetaData from "../layout/MetaData";
 import NewReview from '../reviews/NewReview'
 import ListReviews from '../reviews/ListReviews'
+import NotFound from '../layout/NotFound'
 
 const ProductDetails = () => {
     const params = useParams();
@@ -65,6 +66,10 @@ const ProductDetails = () => {
 
         dispatch(setCartItem(cartItem));
         toast.success('Item added to cart');
+    }
+
+    if (error && error?.status === 404) {
+        return <NotFound />
     }
 
     if (isLoading) return <Loader />;
@@ -138,7 +143,7 @@ const ProductDetails = () => {
                         type="button"
                         id="cart_btn"
                         className="btn btn-primary d-inline ms-4"
-                        disabled={product.stock <= 0}
+                        disabled={product?.stock <= 0}
                         onClick={sendItemToCart}
                     >
                         Add to Cart

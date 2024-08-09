@@ -28,8 +28,8 @@ const Header = () => {
     <nav className="navbar row">
       <div className="col-12 col-md-3 ps-5">
         <div className="navbar-brand">
-          <a href="/">
-            <img src="/images/dealDepot_logo.png" alt="DealDepot Logo" />
+          <a href="/" style={{ textDecoration: "none", color: "white" }}>
+            DealDepot
           </a>
         </div>
       </div>

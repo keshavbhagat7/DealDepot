@@ -7,16 +7,12 @@ export default [
       ratings: 4.5,
       images: [
         {
-          public_id: "dealdepot/demo/nkkjkta63uiazppzkmjf",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577488/dealdepot/demo/nkkjkta63uiazppzkmjf.jpg",
+          public_id: "dealDepot/products/euwnkfpaijn0ur4no2og",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185454/dealDepot/products/euwnkfpaijn0ur4no2og.jpg",
         },
         {
-          public_id: "dealdepot/demo/hz1iwdqzrvxtfxincvju",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577488/dealdepot/demo/hz1iwdqzrvxtfxincvju.jpg",
-        },
-        {
-          public_id: "dealdepot/demo/oc2dvvkxyxukc13y9pjv",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577488/dealdepot/demo/oc2dvvkxyxukc13y9pjv.jpg",
+          public_id: "dealDepot/products/nbeqt98pgmilhw8mp8mj",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185454/dealDepot/products/nbeqt98pgmilhw8mp8mj.jpg",
         },
       ],
       category: "Electronics",
@@ -33,20 +29,12 @@ export default [
       ratings: 1.65,
       images: [
         {
-          public_id: "dealdepot/demo/e3hweb3tbp5zacfi564c",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577509/dealdepot/demo/e3hweb3tbp5zacfi564c.jpg",
+          public_id: "dealDepot/products/qzz7xkzvkc5ugk19kwb1",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185609/dealDepot/products/qzz7xkzvkc5ugk19kwb1.jpg",
         },
         {
-          public_id: "dealdepot/demo/mjcc0kg0lzxegrauh8qc",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577509/dealdepot/demo/mjcc0kg0lzxegrauh8qc.jpg",
-        },
-        {
-          public_id: "dealdepot/demo/iruzmpgrhb6xyqheppxg",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577509/dealdepot/demo/iruzmpgrhb6xyqheppxg.jpg",
-        },
-        {
-          public_id: "dealdepot/demo/bj3auijqcxxvkwdohznb",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577510/dealdepot/demo/bj3auijqcxxvkwdohznb.jpg",
+          public_id: "dealDepot/products/bvequiujuyzmum7hjpkt",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185609/dealDepot/products/bvequiujuyzmum7hjpkt.jpg",
         },
       ],
       category: "Electronics",
@@ -63,12 +51,20 @@ export default [
       ratings: 3.5,
       images: [
         {
-          public_id: "dealdepot/demo/yqqwxrgst2pi3frtngaw",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577531/dealdepot/demo/yqqwxrgst2pi3frtngaw.jpg",
+          public_id: "dealDepot/products/keamlqrsyyybdz0w6qp9",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185757/dealDepot/products/keamlqrsyyybdz0w6qp9.jpg",
         },
         {
-          public_id: "dealdepot/demo/pgcwny8xyshsnwaiikbm",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577531/dealdepot/demo/pgcwny8xyshsnwaiikbm.jpg",
+          public_id: "dealDepot/products/ygbsi7wvyof7gwqyntka",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185757/dealDepot/products/ygbsi7wvyof7gwqyntka.jpg",
+        },
+        {
+          public_id: "dealDepot/products/pogjt1bzfvfngl4n8oht",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185757/dealDepot/products/pogjt1bzfvfngl4n8oht.webp",
+        },
+        {
+          public_id: "dealDepot/products/evwaglrnz9bsh20pcoi3",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185758/dealDepot/products/evwaglrnz9bsh20pcoi3.jpg",
         },
       ],
       category: "Electronics",
@@ -85,12 +81,12 @@ export default [
       ratings: 4.5,
       images: [
         {
-          public_id: "dealdepot/demo/yxbrklp7snr7dgxfrxu9",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577543/dealdepot/demo/yxbrklp7snr7dgxfrxu9.jpg",
+          public_id: "dealDepot/products/cddb13kiuqmq8txmwesp",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185932/dealDepot/products/cddb13kiuqmq8txmwesp.png",
         },
         {
-          public_id: "dealdepot/demo/i8ge1ilin2fz9tk2okni",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577543/dealdepot/demo/i8ge1ilin2fz9tk2okni.jpg",
+          public_id: "dealDepot/products/r3nbccgmrjgvpduyiyqu",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723185931/dealDepot/products/r3nbccgmrjgvpduyiyqu.jpg",
         },
       ],
       category: "Headphones",
@@ -107,16 +103,8 @@ export default [
       ratings: 4.8,
       images: [
         {
-          public_id: "dealdepot/demo/yj00oalanbzmbzctsbln",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577557/dealdepot/demo/yj00oalanbzmbzctsbln.jpg",
-        },
-        {
-          public_id: "dealdepot/demo/mijzcdd5sle8a2any1i8",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577557/dealdepot/demo/mijzcdd5sle8a2any1i8.jpg",
-        },
-        {
-          public_id: "dealdepot/demo/kxckb0o7fbdwqgmugoct",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577557/dealdepot/demo/kxckb0o7fbdwqgmugoct.jpg",
+          public_id: "dealDepot/products/g7csahicrh3bmtcuvepe",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186075/dealDepot/products/g7csahicrh3bmtcuvepe.jpg",
         },
       ],
       category: "Electronics",
@@ -133,8 +121,16 @@ export default [
       ratings: 4.1,
       images: [
         {
-          public_id: "dealdepot/demo/xmndneguqtrcutpf9wcz",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577572/dealdepot/demo/xmndneguqtrcutpf9wcz.jpg",
+          public_id: "dealDepot/products/g2voqv5ko3bd4egdycjy",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186159/dealDepot/products/g2voqv5ko3bd4egdycjy.jpg",
+        },
+        {
+          public_id: "dealDepot/products/vwq4e0tok1ee23kth890",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186159/dealDepot/products/vwq4e0tok1ee23kth890.jpg",
+        },
+        {
+          public_id: "dealDepot/products/tyf3xdlcujkpteveex5d",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186159/dealDepot/products/tyf3xdlcujkpteveex5d.jpg",
         },
       ],
       category: "Accessories",
@@ -151,16 +147,12 @@ export default [
       ratings: 4.7,
       images: [
         {
-          public_id: "dealdepot/demo/q6ybe84qlkzwet9qwptz",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577585/dealdepot/demo/q6ybe84qlkzwet9qwptz.jpg",
+          public_id: "dealDepot/products/k6sqxmddiv3s2uvksyv4",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186277/dealDepot/products/k6sqxmddiv3s2uvksyv4.jpg",
         },
         {
-          public_id: "dealdepot/demo/niqqio1faynnscubkkmd",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577585/dealdepot/demo/niqqio1faynnscubkkmd.jpg",
-        },
-        {
-          public_id: "dealdepot/demo/dy3nhjgsdgqcnrwf8u2h",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577585/dealdepot/demo/dy3nhjgsdgqcnrwf8u2h.jpg",
+          public_id: "dealDepot/products/fbdxw23unydptqdyalhe",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186277/dealDepot/products/fbdxw23unydptqdyalhe.jpg",
         },
       ],
       category: "Cameras",
@@ -177,21 +169,17 @@ export default [
       ratings: 4.9,
       images: [
         {
-          public_id: "dealdepot/demo/jzqaj98nnhy0hcsilx9y",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577597/dealdepot/demo/jzqaj98nnhy0hcsilx9y.jpg",
+          public_id: "dealDepot/products/cdxpgicfyewzhpu415dr",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186377/dealDepot/products/cdxpgicfyewzhpu415dr.jpg",
         },
         {
-          public_id: "dealdepot/demo/welkq4dgfi5267usmj0n",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577597/dealdepot/demo/welkq4dgfi5267usmj0n.jpg",
-        },
-        {
-          public_id: "dealdepot/demo/pabtjloyzenmr6z8klcr",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577600/dealdepot/demo/pabtjloyzenmr6z8klcr.jpg",
+          public_id: "dealDepot/products/l9ruegzjsnqfda0lug7z",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186377/dealDepot/products/l9ruegzjsnqfda0lug7z.jpg",
         },
       ],
       category: "Laptops",
       seller: "Amazon",
-      stock: 0,
+      stock: 3,
       numOfReviews: 56,
       reviews: [],
     },
@@ -203,12 +191,12 @@ export default [
       ratings: 5,
       images: [
         {
-          public_id: "dealdepot/demo/mq0zpyzmzqokphs9m9we",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577619/dealdepot/demo/mq0zpyzmzqokphs9m9we.jpg",
+          public_id: "dealDepot/products/e5frydlfqyyk8i5mn0nt",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186450/dealDepot/products/e5frydlfqyyk8i5mn0nt.jpg",
         },
         {
-          public_id: "dealdepot/demo/pkyy8rifxpesiwpy23kk",
-          url: "http://res.cloudinary.com/udemy-courses/image/upload/v1698577619/dealdepot/demo/pkyy8rifxpesiwpy23kk.jpg",
+          public_id: "dealDepot/products/boc2uetui9g1zyxwakgk",
+          url: "http://res.cloudinary.com/dd1qfdq5t/image/upload/v1723186450/dealDepot/products/boc2uetui9g1zyxwakgk.jpg",
         },
       ],
       category: "Food",
