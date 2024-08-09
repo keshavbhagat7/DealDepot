@@ -20,8 +20,6 @@ const ProductDetails = () => {
     const { data, isLoading, error, isError } = useGetProductDetailsQuery(params?.id);
     const product = data?.product;
 
-    console.log(data?.product);
-
     const { isAuthenticated } = useSelector((state) => state.auth)
 
     const [activeImage, setActiveImage] = useState('')
